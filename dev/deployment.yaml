@@ -12,6 +12,8 @@ spec:
       labels:
         app: myapp
     spec:
+      imagePullSecrets:
+      - name: ecr-registry-key
       containers:
       - name: myapp
         image: 288208893221.dkr.ecr.us-east-1.amazonaws.com/docker-ecr-test:latest
