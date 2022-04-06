@@ -6,17 +6,17 @@ spec:
   selector:
     matchLabels:
       app: myapp
-  replicas: 6
+  replicas: 4
   template:
     metadata:
       labels:
         app: myapp
     spec:
-      imagePullSecrets:
-      - name: regcred
+      #imagePullSecrets:
+      #- name: regcred
       containers:
       - name: myapp
-        image: 288208893221.dkr.ecr.us-east-1.amazonaws.com/docker-ecr-test:latest
+        image: nginx
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
