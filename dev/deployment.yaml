@@ -12,11 +12,11 @@ spec:
       labels:
         app: myapp
     spec:
-      #imagePullSecrets:
-      #- name: regcred
+      imagePullSecrets:
+      - name: ecr-registry-key
       containers:
       - name: myapp
-        image: nginx
+        image: 288208893221.dkr.ecr.us-east-1.amazonaws.com/docker-ecr-test:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
