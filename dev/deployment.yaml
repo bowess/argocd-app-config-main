@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: myapp
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -14,9 +14,10 @@ spec:
     spec:
       imagePullSecrets:
       - name: ecr-registry-key
+      revisionHistoryLimit: 0 # Default to 10 if not specified
       containers:
       - name: myapp
-        image: 288208893221.dkr.ecr.us-east-1.amazonaws.com/docker-ecr-test:latest
+        image: nginx
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
