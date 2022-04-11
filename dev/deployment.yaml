@@ -19,4 +19,4 @@ spec:
         image: 288208893221.dkr.ecr.us-east-1.amazonaws.com/docker-ecr-test:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
