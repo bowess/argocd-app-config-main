@@ -16,7 +16,7 @@ spec:
       - name: ecr-registry-key
       containers:
       - name: myapp
-        image: busybox
+        image: nginx
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
