@@ -16,7 +16,7 @@ spec:
       - name: ecr-registry-key
       containers:
       - name: myapp
-        image: 288208893221.dkr.ecr.us-east-1.amazonaws.com/docker-ecr-test:latest
+        image: 288208893221.dkr.ecr.us-east-1.amazonaws.com/docker-ecr-test:latest.1
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
